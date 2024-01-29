@@ -214,8 +214,8 @@ function page2Animation() {
       trigger: ".page2 .about",
       scroller: ".main",
       // markers: true,
-      start: "top 80%",
-      end: "top 65%",
+      // start: "top 80%",
+      // end: "top 65%",
       // scrub: 2
     },
   })
