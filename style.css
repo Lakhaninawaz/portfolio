@@ -1,0 +1,735 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT&family=Roboto+Condensed:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@500&family=Josefin+Sans&family=Playfair+Display:wght@500&display=swap');
+
+@font-face {
+    font-family: gilroy;
+    src: url(./resource//Gilroy-Medium.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', serif;
+    color: #fff;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background: #000;
+}
+
+.container{
+    padding: 2vh 5vw;
+}
+
+/* loader Css */
+
+.preloader {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10vw;
+}
+
+
+.preloader h1 {
+    overflow: hidden;
+    margin-top: 4vh;
+    width: fit-content;
+    display: block;
+    /* background-color: blue; */
+    text-align: center;
+    font-size: 9vw;
+    text-transform: uppercase;
+    font-family: 'gilroy', serif;
+}
+
+.preloader h1:nth-child(2) {
+    margin-left: 20%;
+}
+
+.first {
+    width: 100%;
+    height: 50%;
+    /* background-color: red; */
+}
+
+.second {
+    width: 100%;
+    height: 50%;
+    /* background-color: royalblue; */
+}
+
+/* loader responsive css */
+
+
+@media (max-width: 600px) {
+    .preloader h1 {
+        font-size: 12vw;
+    }
+}
+
+.main {
+    background-color: #111;
+    /* width: 100%;
+    height: 100%; */
+    overflow: hidden;
+}
+
+.cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transition: 0.7s cubic-bezier(0.75, 0.27, 0.3, 1.33) transform,
+        0.1s cubic-bezier(0.75, -0.57, 0.3, -0.33) opacity;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(0);
+    z-index: 10;
+    overflow: hidden;
+}
+
+.cursor h5 {
+    height: 100%;
+    font-size: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #111;
+}
+
+.grow {
+    transform: scale(7);
+}
+
+.sticky {
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+/* navbar Css */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    padding: 4px 22px;
+    position: fixed;
+    z-index: 9;
+    background-color: #11111123;
+}
+
+
+.navbar .logo {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2vmax;
+    font-family: 'gilroy';
+}
+
+
+.resume {
+    /* display: block; */
+    height: 20px;
+    line-height: 25px;
+    position: relative;
+    transition: 0.3s;
+    overflow: hidden;
+    /* left: -2%; */
+}
+
+.resume a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    display: block;
+    position: relative;
+    height: 100%;
+    top: 0%;
+    font-size: 1vmax;
+    font-family: 'Josefin Sans';
+}
+
+/* navbar responsive css */
+
+@media (max-width: 600px) {
+    .navbar .logo {
+        font-size: 4vmax;
+    }
+
+    .resume a {
+        font-size: 1.5vmax;
+    }
+}
+
+/* page1 css */
+
+.page1 {
+    width: 100%;
+    min-height: 100vh;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.page1 h3 {
+    font-size: 2vw;
+    /* margin-top: 50px; */
+    font-family: 'Josefin Sans', serif;
+    margin-top: 90px;
+
+}
+
+.space {
+    width: 65%;
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* margin-top: 30px; */
+}
+
+.page1 .space h1 {
+    overflow: hidden;
+    margin-top: 4vh;
+    width: fit-content;
+    /* background-color: blue; */
+    text-align: center;
+    font-size: 9vw;
+    text-transform: uppercase;
+    font-family: 'gilroy', serif;
+}
+
+.page1 h1:nth-child(2) {
+    margin-left: 20%;
+}
+
+.scroll {
+    margin: 20px 0;
+}
+
+.scroll p {
+    text-align: center;
+    font-size: 4vw;
+    padding-bottom: 20px;
+    font-family: 'Josefin Sans';
+    font-weight: 500;
+    transition: transform cubic-bezier(.15, .41, .69, .94);
+}
+
+.scroll h3 {
+    font-weight: 100;
+    margin-top: 20px;
+    font-size: 2vw;
+    font-family: 'Josefin Sans';
+}
+
+/* page1 responsive css */
+
+@media (max-width: 600px) {
+    .page1 {
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .page1 h3 {
+        font-size: 5vw
+    }
+
+    .page1 .space {
+        width: 100%;
+    }
+
+    .page1 .space h1 {
+        font-size: 11vw;
+    }
+
+    .page1 h1:nth-child(1) {
+        margin-right: 8%;
+    }
+
+    .scroll p {
+        font-size: 9vw;
+    }
+
+    .scroll h3 {
+        font-size: 6vw;
+    }
+}
+
+/* page2 css */
+
+.page2 {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.page2 h3 {
+    margin: 50px 0;
+    height: 100px;
+    font-size: 5vw;
+    white-space: nowrap;
+    font-family: 'gilroy';
+    font-weight: 100;
+}
+
+.about {
+    border-bottom: 2px solid #fff;
+    margin-bottom: 10px;
+}
+
+.about h2 {
+    margin-bottom: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 100;
+    position: relative;
+    width: fit-content;
+    font-size: 1.5vw;
+}
+
+.about h2:after {
+    content: '';
+    height: 2px;
+    background: #fff;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform .3s ease-out;
+    transform-origin: bottom right;
+}
+
+.about h2:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.page2 .content{
+    text-align: center;
+}
+
+.page2 .content h1 {
+    font-size: 4vmax;
+    /* color: #fff; */
+    font-family: 'gilroy', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    display: inline;
+    line-height: 1.3;
+    background: linear-gradient(to left,
+            rgba(173, 173, 173, 0.544) 50%,
+            rgb(255, 255, 255) 50%);
+    background-size: 200% 100%;
+    background-position-x: 0%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.page2 .content h1 b{
+    font-weight: 300;
+}
+
+/* page2 responsive css */
+
+@media (max-width: 600px) {
+    .page2 h3 {
+        margin: 30px 0;
+        margin-bottom: 0;
+        height: 65px;
+        font-size: 9vw;
+    }
+
+    .page2 .about{
+        margin-bottom: 20px;
+    }
+
+    .page2 .about h2{
+        font-size: 5vw;
+    }
+}
+
+/* page3 css */
+
+.page3 {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+
+.page3 .container .portfolio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #fff;
+    text-transform: uppercase;
+}
+
+.portfolio h2,
+.portfolio a {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 100;
+    margin-top: 20px;
+    font-size: 1.2vw;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.portfolio a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'gilroy', sans-serif;
+    /* font-weight: 500; */
+    cursor: pointer;
+}
+
+.portfolio h2:after,
+.portfolio a:after {
+    content: '';
+    height: 2px;
+    background: #fff;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform .3s ease-out;
+    transform-origin: bottom right;
+}
+
+.portfolio a:after {
+    transition: transform .5s ease-out;
+}
+
+.portfolio h2:hover::after,
+.portfolio a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.project {
+    margin-top: 100px;
+}
+
+.heading {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project h1 {
+    font-size: 10vw;
+    text-align: center;
+    text-indent: 3vw;
+    /* font-family: 'Josefin Sans', sans-serif; */
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.projectContainer {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.left {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.right {
+    width: 50%;
+    height: 100%;
+}
+
+
+.projectContainer .gif,
+.projectContainer .gif {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+
+.projectContainer .project-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: #51CDE7; */
+    z-index: 15;
+}
+
+.projectContainer .projectDescription {
+    padding-left: 2vw;
+    /* background-color: blue; */
+    margin-bottom: 30px;
+}
+
+
+.projectDescription h2,
+.projectDescription h2 {
+    font-family: 'comfortaa', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 2vw;
+    /* width: 33%; */
+}
+
+.projectDescription p,
+.projectDescription p {
+    /* width: 70%; */
+    width: 30%;
+    font-family: 'comfortaa';
+    /* font-weight: 500; */
+    margin-top: 20px;
+    font-size: 1vw;
+
+}
+
+.left .projectDescription {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    /* background-color: red; */
+    padding-right: 2vw;
+
+}
+
+.left .projectDescription p {
+    /* background-color: aqua; */
+    width: 40%;
+    text-align: end;
+}
+
+/* page3 responsive css */
+
+@media (max-width: 600px) {
+    .portfolio h2, .portfolio a{
+        font-size: 4.5vw;
+    }
+
+    .project{
+        margin-top: 20px;
+    }
+
+    .projectContainer{
+        min-height: 100px;
+        margin-top: 20px;
+    }
+
+    .projectContainer .projectDescription {
+        padding-left: 2vw;
+        margin-bottom: 10px;
+    }
+    
+    .projectDescription h2,
+.projectDescription h2 {
+    font-weight: 600;
+    font-size: 4vw;
+    /* width: 33%; */
+}
+
+.projectDescription p,
+.projectDescription p {
+    /* width: 70%; */
+    width: 100%;
+    margin-top: 10px;
+    font-size: 2.5vw;
+
+}
+
+.left .projectDescription p {
+    width: 100%;
+    text-align: end;
+}
+}
+
+
+
+.page4 {
+    width: 100%;
+    min-height: 70vh;
+    /* background: #eef1f8; */
+    margin-top: 30px;
+}
+
+.skill {
+    border-bottom: 2px solid #fff;
+    margin-bottom: 10px;
+}
+
+.skill h2 {
+    margin-bottom: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 200;
+    position: relative;
+    width: fit-content;
+    text-transform: uppercase;
+}
+
+.skill h2::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transform: scaleX(0);
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: transform .3s ease-out;
+    transform-origin: bottom right;
+}
+
+.skill h2:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.imgContainer {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px
+}
+
+.skillImg {
+    margin: 10px;
+}
+
+.skillImg .img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 200px;
+    object-fit: contain;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+.skillImg .img img {
+    width: 70px;
+    height: 70px;
+    transform: scale(1);
+    transition: transform .3s ease-in;
+}
+
+.skillImg .img:hover img {
+    transform: scale(1.1);
+}
+
+.skillImg .img-box p {
+    text-align: center;
+    font-family: 'gilroy', serif;
+    margin-top: 7px;
+}
+
+
+.page5 {
+    width: 100%;
+    height: 100vh;
+}
+
+
+.contact {
+    border-bottom: 2px solid #fff;
+    margin-bottom: 10px;
+}
+
+.contact h2 {
+    margin-bottom: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 200;
+    position: relative;
+    width: fit-content;
+    text-transform: uppercase;
+}
+
+.contact h2::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transform: scaleX(0);
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: transform .3s ease-out;
+    transform-origin: bottom right;
+}
+
+.contact h2:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.page5 h1 {
+    font: 700 9vmax "Gilroy";
+    font-weight: 900;
+}
+
+.page5 a {
+    text-decoration: line-through;
+}
+
+.mail a {
+    color: #FC626A;
+}
+
+.linkedin a {
+    color: #51CDE7;
+}
+
+.page5 a:hover {
+    text-decoration: none;
+}
+
+footer h3 {
+    font-weight: 100;
+    text-align: center;
+    font-family: 'gilroy';
+    padding-bottom: 20px;
+}
