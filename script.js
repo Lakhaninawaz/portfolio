@@ -124,9 +124,7 @@ function cursorEffect() {
 }
 
 window.onload = function loaderEffect() {
-  const preloader = document.querySelector('.preloader');
   const tl = gsap.timeline();
-  const text = document.querySelector('.preloader h1');
   
     tl.from(".preloader h1", {
       y: 100,
@@ -134,7 +132,7 @@ window.onload = function loaderEffect() {
       duration: 1,
       stagger: 0.4,
       // rotationX:10,
-      transformOrigin: "0% 50% -50",
+      // transformOrigin: "0% 50% -50",
       ease: "back"
     })
     tl.to(".preloader h1", {
@@ -193,7 +191,6 @@ function navEffect() {
 }
 
 function page1Animation() {
-
   gsap.to(".page1 p", {
     y: 30,
     repeat: -1,
@@ -461,7 +458,7 @@ init()
 cursorEffect()
 navEffect()
 // loaderEffect()
-// page1Animation()
+page1Animation()
 page2Animation()
 page3Animation()
 page4Animation()
