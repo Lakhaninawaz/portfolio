@@ -123,12 +123,11 @@ function cursorEffect() {
 
 }
 
-function loaderEffect() {
+window.onload = function loaderEffect() {
   const preloader = document.querySelector('.preloader');
   const tl = gsap.timeline();
   const text = document.querySelector('.preloader h1');
-
-  window.onload = function load() {
+  
     tl.from(".preloader h1", {
       y: 100,
       opacity: 0,
@@ -151,23 +150,30 @@ function loaderEffect() {
     //   height: -100 + "vh",
     //   duration: .7
     // })
-    tl.to(".preloader ", {
-      y: -100 + "%"
-    })
-      .from(".navbar a", {
-        y: -70,
-        duration: .4,
-        opacity: 0
-      })
-      .from(".page1 .who, .page1 h1, .page1 .scroll", {
-        y: 100,
-        duration: 1,
-        opacity: 0,
-        stagger: 0.3,
-        // yoyo: true
-      })
+    
+  tl.to(".preloader ", {
+    y: -100 + "%"
+  })
+  
+  // const tl = gsap.timeline()
+
+  tl.from(".navbar a", {
+    y: -70,
+    duration: .4,
+    opacity: 0
+  })
+  .from(".page1 .who, .page1 h1, .page1 .scroll", {
+    y: 100,
+    duration: 1,
+    opacity: 0,
+    stagger: 0.3,
+    // yoyo: true
+  })
+
+
+
+
   }
-};
 
 function navEffect() {
   var element = document.querySelector(".resume");
@@ -187,6 +193,7 @@ function navEffect() {
 }
 
 function page1Animation() {
+
   gsap.to(".page1 p", {
     y: 30,
     repeat: -1,
@@ -453,8 +460,8 @@ magneticEffectTag()
 init()
 cursorEffect()
 navEffect()
-loaderEffect()
-page1Animation()
+// loaderEffect()
+// page1Animation()
 page2Animation()
 page3Animation()
 page4Animation()
