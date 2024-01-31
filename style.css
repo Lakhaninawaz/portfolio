@@ -547,6 +547,9 @@ body {
 /* page3 responsive css */
 
 @media (max-width: 600px) {
+    .page3{
+        min-height: 70vh;
+    }
     .portfolio h2, .portfolio a{
         font-size: 4.5vw;
     }
