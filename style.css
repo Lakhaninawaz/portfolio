@@ -74,7 +74,8 @@ body {
 @media (max-width: 600px) {
 
     .cursor{
-    transform: scale(1) !important;
+    /* transform: scale(0) !important; */
+    display: none;
     }
     
     .preloader h1 {
@@ -470,7 +471,7 @@ body {
     width: 100%;
     min-height: 400px;
     flex-wrap: wrap;
-    margin-top: 5vw;
+    margin-top: 3vw;
 }
 
 .left {
