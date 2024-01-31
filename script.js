@@ -35,6 +35,7 @@ function init() {
   // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
   ScrollTrigger.refresh();
 
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
 }
 
 function cursorEffect() {
