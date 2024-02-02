@@ -73,19 +73,17 @@ function cursorEffect() {
 
 
     gsap.to(cursor, {
-      scale: 1,
       opacity: 1,
-      duration: .5
     })
 
   })
 
   document.addEventListener("mouseenter", function () {
-    // gsap.to(cursor, {
-    //   scale: 1,
-    //   opacity: 1,
-    //   duration: .5
-    // })
+    gsap.to(cursor, {
+      scale: 1,
+      // opacity: 1,
+      duration: .5
+    })
 
     cursorScale.forEach(link => {
       link.addEventListener('mouseleave', () => {
