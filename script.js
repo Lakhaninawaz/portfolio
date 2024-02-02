@@ -60,7 +60,6 @@ function cursorEffect() {
   document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX - 5;
     mouseY = e.clientY - 5;
-    cursor.style.opacity = 1;
 
     // var cursor = document.querySelector(".cursor")
     // var cursorScale = document.querySelectorAll(".cursor-scale")
