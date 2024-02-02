@@ -82,7 +82,7 @@ function cursorEffect() {
     gsap.to(cursor, {
       scale: 1,
       // opacity: 1,
-      duration: .5
+      duration: 0.5
     })
 
     cursorScale.forEach(link => {
@@ -120,7 +120,8 @@ function cursorEffect() {
   document.addEventListener("mouseleave", function () {
     gsap.to(cursor, {
       scale: 0,
-      opacity: 0
+      opacity: 0,
+      duration: 0.5
     })
   })
 
