@@ -90,7 +90,8 @@ function cursorEffect() {
         // cursor.classList.remove("grow")
         cursor.innerHTML = ""
         gsap.to(cursor, {
-          scale: 1
+          scale: 1,
+          opacity: 1
         })
       });
 
